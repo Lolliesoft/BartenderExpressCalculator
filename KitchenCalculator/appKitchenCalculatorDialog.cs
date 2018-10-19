@@ -3,6 +3,7 @@
     using Microsoft.Win32;
     using System;
     using System.ComponentModel;
+    using System.Diagnostics;
     using System.Drawing;
     using System.Globalization;
     using System.Windows.Forms;
@@ -55,7 +56,6 @@
         private Button KilogramButton;
         private Button KilojouleButton;
         private Button LiterButton;
-        private MenuStrip MainMenuMenuStrip;
         private Button MemoryAddButton;
         private Button MemoryClearButton;
         private Label MemoryLabel;
@@ -90,6 +90,9 @@
         private Button TwoButton;
         private ToolStripMenuItem UKToolStripMenuItem;
         private ToolStripMenuItem USToolStripMenuItem;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel toolStripStatusLabel2;
         private Button ZeroButton;
 
         public appKitchenCalculatorDialog()
@@ -2515,6 +2518,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(appKitchenCalculatorDialog));
             this.MemoryClearButton = new System.Windows.Forms.Button();
             this.MemoryRecallButton = new System.Windows.Forms.Button();
             this.MemorySaveButton = new System.Windows.Forms.Button();
@@ -2545,7 +2549,6 @@
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainMenuMenuStrip = new System.Windows.Forms.MenuStrip();
             this.OptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.USToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CanadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -2579,12 +2582,16 @@
             this.DegreeCButton = new System.Windows.Forms.Button();
             this.CalorieButton = new System.Windows.Forms.Button();
             this.KilojouleButton = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MemoryClearButton
             // 
             this.MemoryClearButton.ForeColor = System.Drawing.Color.Red;
-            this.MemoryClearButton.Location = new System.Drawing.Point(12, 93);
+            this.MemoryClearButton.Location = new System.Drawing.Point(12, 71);
             this.MemoryClearButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MemoryClearButton.Name = "MemoryClearButton";
             this.MemoryClearButton.Size = new System.Drawing.Size(36, 28);
@@ -2598,7 +2605,7 @@
             // MemoryRecallButton
             // 
             this.MemoryRecallButton.ForeColor = System.Drawing.Color.Red;
-            this.MemoryRecallButton.Location = new System.Drawing.Point(12, 124);
+            this.MemoryRecallButton.Location = new System.Drawing.Point(12, 102);
             this.MemoryRecallButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MemoryRecallButton.Name = "MemoryRecallButton";
             this.MemoryRecallButton.Size = new System.Drawing.Size(36, 28);
@@ -2612,7 +2619,7 @@
             // MemorySaveButton
             // 
             this.MemorySaveButton.ForeColor = System.Drawing.Color.Red;
-            this.MemorySaveButton.Location = new System.Drawing.Point(12, 155);
+            this.MemorySaveButton.Location = new System.Drawing.Point(12, 133);
             this.MemorySaveButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MemorySaveButton.Name = "MemorySaveButton";
             this.MemorySaveButton.Size = new System.Drawing.Size(36, 28);
@@ -2626,7 +2633,7 @@
             // MemoryAddButton
             // 
             this.MemoryAddButton.ForeColor = System.Drawing.Color.Red;
-            this.MemoryAddButton.Location = new System.Drawing.Point(12, 186);
+            this.MemoryAddButton.Location = new System.Drawing.Point(12, 164);
             this.MemoryAddButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MemoryAddButton.Name = "MemoryAddButton";
             this.MemoryAddButton.Size = new System.Drawing.Size(36, 28);
@@ -2640,7 +2647,7 @@
             // ZeroButton
             // 
             this.ZeroButton.ForeColor = System.Drawing.Color.Blue;
-            this.ZeroButton.Location = new System.Drawing.Point(57, 186);
+            this.ZeroButton.Location = new System.Drawing.Point(57, 164);
             this.ZeroButton.Margin = new System.Windows.Forms.Padding(9, 3, 0, 0);
             this.ZeroButton.Name = "ZeroButton";
             this.ZeroButton.Size = new System.Drawing.Size(36, 28);
@@ -2654,7 +2661,7 @@
             // OneButton
             // 
             this.OneButton.ForeColor = System.Drawing.Color.Blue;
-            this.OneButton.Location = new System.Drawing.Point(57, 155);
+            this.OneButton.Location = new System.Drawing.Point(57, 133);
             this.OneButton.Margin = new System.Windows.Forms.Padding(9, 3, 0, 0);
             this.OneButton.Name = "OneButton";
             this.OneButton.Size = new System.Drawing.Size(36, 28);
@@ -2668,7 +2675,7 @@
             // PlusMinusButton
             // 
             this.PlusMinusButton.ForeColor = System.Drawing.Color.Blue;
-            this.PlusMinusButton.Location = new System.Drawing.Point(96, 186);
+            this.PlusMinusButton.Location = new System.Drawing.Point(96, 164);
             this.PlusMinusButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.PlusMinusButton.Name = "PlusMinusButton";
             this.PlusMinusButton.Size = new System.Drawing.Size(36, 28);
@@ -2682,7 +2689,7 @@
             // TwoButton
             // 
             this.TwoButton.ForeColor = System.Drawing.Color.Blue;
-            this.TwoButton.Location = new System.Drawing.Point(96, 155);
+            this.TwoButton.Location = new System.Drawing.Point(96, 133);
             this.TwoButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.TwoButton.Name = "TwoButton";
             this.TwoButton.Size = new System.Drawing.Size(36, 28);
@@ -2696,7 +2703,7 @@
             // PeriodButton
             // 
             this.PeriodButton.ForeColor = System.Drawing.Color.Blue;
-            this.PeriodButton.Location = new System.Drawing.Point(135, 186);
+            this.PeriodButton.Location = new System.Drawing.Point(135, 164);
             this.PeriodButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.PeriodButton.Name = "PeriodButton";
             this.PeriodButton.Size = new System.Drawing.Size(36, 28);
@@ -2710,7 +2717,7 @@
             // ThreeButton
             // 
             this.ThreeButton.ForeColor = System.Drawing.Color.Blue;
-            this.ThreeButton.Location = new System.Drawing.Point(135, 155);
+            this.ThreeButton.Location = new System.Drawing.Point(135, 133);
             this.ThreeButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.ThreeButton.Name = "ThreeButton";
             this.ThreeButton.Size = new System.Drawing.Size(36, 28);
@@ -2724,7 +2731,7 @@
             // SixButton
             // 
             this.SixButton.ForeColor = System.Drawing.Color.Blue;
-            this.SixButton.Location = new System.Drawing.Point(135, 124);
+            this.SixButton.Location = new System.Drawing.Point(135, 102);
             this.SixButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.SixButton.Name = "SixButton";
             this.SixButton.Size = new System.Drawing.Size(36, 28);
@@ -2738,7 +2745,7 @@
             // FiveButton
             // 
             this.FiveButton.ForeColor = System.Drawing.Color.Blue;
-            this.FiveButton.Location = new System.Drawing.Point(96, 124);
+            this.FiveButton.Location = new System.Drawing.Point(96, 102);
             this.FiveButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.FiveButton.Name = "FiveButton";
             this.FiveButton.Size = new System.Drawing.Size(36, 28);
@@ -2752,7 +2759,7 @@
             // FourButton
             // 
             this.FourButton.ForeColor = System.Drawing.Color.Blue;
-            this.FourButton.Location = new System.Drawing.Point(57, 124);
+            this.FourButton.Location = new System.Drawing.Point(57, 102);
             this.FourButton.Margin = new System.Windows.Forms.Padding(9, 3, 0, 0);
             this.FourButton.Name = "FourButton";
             this.FourButton.Size = new System.Drawing.Size(36, 28);
@@ -2766,7 +2773,7 @@
             // NineButton
             // 
             this.NineButton.ForeColor = System.Drawing.Color.Blue;
-            this.NineButton.Location = new System.Drawing.Point(135, 93);
+            this.NineButton.Location = new System.Drawing.Point(135, 71);
             this.NineButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.NineButton.Name = "NineButton";
             this.NineButton.Size = new System.Drawing.Size(36, 28);
@@ -2780,7 +2787,7 @@
             // EightButton
             // 
             this.EightButton.ForeColor = System.Drawing.Color.Blue;
-            this.EightButton.Location = new System.Drawing.Point(96, 93);
+            this.EightButton.Location = new System.Drawing.Point(96, 71);
             this.EightButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.EightButton.Name = "EightButton";
             this.EightButton.Size = new System.Drawing.Size(36, 28);
@@ -2794,7 +2801,7 @@
             // SevenButton
             // 
             this.SevenButton.ForeColor = System.Drawing.Color.Blue;
-            this.SevenButton.Location = new System.Drawing.Point(57, 93);
+            this.SevenButton.Location = new System.Drawing.Point(57, 71);
             this.SevenButton.Margin = new System.Windows.Forms.Padding(9, 3, 0, 0);
             this.SevenButton.Name = "SevenButton";
             this.SevenButton.Size = new System.Drawing.Size(36, 28);
@@ -2808,7 +2815,7 @@
             // BackspaceButton
             // 
             this.BackspaceButton.ForeColor = System.Drawing.Color.Red;
-            this.BackspaceButton.Location = new System.Drawing.Point(57, 62);
+            this.BackspaceButton.Location = new System.Drawing.Point(57, 40);
             this.BackspaceButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.BackspaceButton.Name = "BackspaceButton";
             this.BackspaceButton.Size = new System.Drawing.Size(75, 28);
@@ -2823,7 +2830,7 @@
             // 
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.Red;
-            this.AddButton.Location = new System.Drawing.Point(174, 124);
+            this.AddButton.Location = new System.Drawing.Point(174, 102);
             this.AddButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(36, 59);
@@ -2838,7 +2845,7 @@
             // 
             this.SubtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubtractButton.ForeColor = System.Drawing.Color.Red;
-            this.SubtractButton.Location = new System.Drawing.Point(213, 124);
+            this.SubtractButton.Location = new System.Drawing.Point(213, 102);
             this.SubtractButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.SubtractButton.Name = "SubtractButton";
             this.SubtractButton.Size = new System.Drawing.Size(36, 59);
@@ -2852,7 +2859,7 @@
             // DivideButton
             // 
             this.DivideButton.ForeColor = System.Drawing.Color.Red;
-            this.DivideButton.Location = new System.Drawing.Point(213, 93);
+            this.DivideButton.Location = new System.Drawing.Point(213, 71);
             this.DivideButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.DivideButton.Name = "DivideButton";
             this.DivideButton.Size = new System.Drawing.Size(36, 28);
@@ -2867,7 +2874,7 @@
             // 
             this.MultiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MultiplyButton.ForeColor = System.Drawing.Color.Red;
-            this.MultiplyButton.Location = new System.Drawing.Point(174, 93);
+            this.MultiplyButton.Location = new System.Drawing.Point(174, 71);
             this.MultiplyButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MultiplyButton.Name = "MultiplyButton";
             this.MultiplyButton.Size = new System.Drawing.Size(36, 28);
@@ -2881,7 +2888,7 @@
             // EqualsButton
             // 
             this.EqualsButton.ForeColor = System.Drawing.Color.Red;
-            this.EqualsButton.Location = new System.Drawing.Point(174, 186);
+            this.EqualsButton.Location = new System.Drawing.Point(174, 164);
             this.EqualsButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.EqualsButton.Name = "EqualsButton";
             this.EqualsButton.Size = new System.Drawing.Size(75, 28);
@@ -2895,7 +2902,7 @@
             // ClearButton
             // 
             this.ClearButton.ForeColor = System.Drawing.Color.Red;
-            this.ClearButton.Location = new System.Drawing.Point(193, 62);
+            this.ClearButton.Location = new System.Drawing.Point(193, 40);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(56, 28);
@@ -2909,7 +2916,7 @@
             // ClearEntryButton
             // 
             this.ClearEntryButton.ForeColor = System.Drawing.Color.Red;
-            this.ClearEntryButton.Location = new System.Drawing.Point(135, 62);
+            this.ClearEntryButton.Location = new System.Drawing.Point(135, 40);
             this.ClearEntryButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.ClearEntryButton.Name = "ClearEntryButton";
             this.ClearEntryButton.Size = new System.Drawing.Size(55, 28);
@@ -2966,15 +2973,6 @@
             this.AboutToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.AboutToolStripMenuItem.Text = "&About Pub Grub Calculator";
             this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
-            // 
-            // MainMenuMenuStrip
-            // 
-            this.MainMenuMenuStrip.BackColor = System.Drawing.SystemColors.Control;
-            this.MainMenuMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MainMenuMenuStrip.Name = "MainMenuMenuStrip";
-            this.MainMenuMenuStrip.Size = new System.Drawing.Size(501, 24);
-            this.MainMenuMenuStrip.TabIndex = 0;
-            this.MainMenuMenuStrip.Text = "menuStrip1";
             // 
             // OptionsToolStripMenuItem
             // 
@@ -3054,7 +3052,7 @@
             this.DisplayLabel.BackColor = System.Drawing.Color.White;
             this.DisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayLabel.Location = new System.Drawing.Point(12, 31);
+            this.DisplayLabel.Location = new System.Drawing.Point(12, 9);
             this.DisplayLabel.Name = "DisplayLabel";
             this.DisplayLabel.Size = new System.Drawing.Size(237, 21);
             this.DisplayLabel.TabIndex = 0;
@@ -3067,7 +3065,7 @@
             this.MemoryLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemoryLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MemoryLabel.Location = new System.Drawing.Point(12, 62);
+            this.MemoryLabel.Location = new System.Drawing.Point(12, 40);
             this.MemoryLabel.Name = "MemoryLabel";
             this.MemoryLabel.Size = new System.Drawing.Size(36, 28);
             this.MemoryLabel.TabIndex = 0;
@@ -3124,7 +3122,7 @@
             // FluidOunceButton
             // 
             this.FluidOunceButton.ForeColor = System.Drawing.Color.Green;
-            this.FluidOunceButton.Location = new System.Drawing.Point(258, 93);
+            this.FluidOunceButton.Location = new System.Drawing.Point(258, 71);
             this.FluidOunceButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.FluidOunceButton.Name = "FluidOunceButton";
             this.FluidOunceButton.Size = new System.Drawing.Size(75, 28);
@@ -3138,7 +3136,7 @@
             // TablespoonButton
             // 
             this.TablespoonButton.ForeColor = System.Drawing.Color.Green;
-            this.TablespoonButton.Location = new System.Drawing.Point(258, 62);
+            this.TablespoonButton.Location = new System.Drawing.Point(258, 40);
             this.TablespoonButton.Margin = new System.Windows.Forms.Padding(9, 3, 0, 0);
             this.TablespoonButton.Name = "TablespoonButton";
             this.TablespoonButton.Size = new System.Drawing.Size(75, 28);
@@ -3152,7 +3150,7 @@
             // CupButton
             // 
             this.CupButton.ForeColor = System.Drawing.Color.Green;
-            this.CupButton.Location = new System.Drawing.Point(258, 124);
+            this.CupButton.Location = new System.Drawing.Point(258, 102);
             this.CupButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.CupButton.Name = "CupButton";
             this.CupButton.Size = new System.Drawing.Size(75, 28);
@@ -3166,7 +3164,7 @@
             // PintButton
             // 
             this.PintButton.ForeColor = System.Drawing.Color.Green;
-            this.PintButton.Location = new System.Drawing.Point(258, 155);
+            this.PintButton.Location = new System.Drawing.Point(258, 133);
             this.PintButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.PintButton.Name = "PintButton";
             this.PintButton.Size = new System.Drawing.Size(75, 28);
@@ -3180,7 +3178,7 @@
             // QuartButton
             // 
             this.QuartButton.ForeColor = System.Drawing.Color.Green;
-            this.QuartButton.Location = new System.Drawing.Point(258, 186);
+            this.QuartButton.Location = new System.Drawing.Point(258, 164);
             this.QuartButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.QuartButton.Name = "QuartButton";
             this.QuartButton.Size = new System.Drawing.Size(75, 28);
@@ -3194,7 +3192,7 @@
             // OunceButton
             // 
             this.OunceButton.ForeColor = System.Drawing.Color.Red;
-            this.OunceButton.Location = new System.Drawing.Point(336, 124);
+            this.OunceButton.Location = new System.Drawing.Point(336, 102);
             this.OunceButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.OunceButton.Name = "OunceButton";
             this.OunceButton.Size = new System.Drawing.Size(75, 28);
@@ -3208,7 +3206,7 @@
             // PoundButton
             // 
             this.PoundButton.ForeColor = System.Drawing.Color.Red;
-            this.PoundButton.Location = new System.Drawing.Point(336, 155);
+            this.PoundButton.Location = new System.Drawing.Point(336, 133);
             this.PoundButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.PoundButton.Name = "PoundButton";
             this.PoundButton.Size = new System.Drawing.Size(75, 28);
@@ -3222,7 +3220,7 @@
             // TeaspoonButton
             // 
             this.TeaspoonButton.ForeColor = System.Drawing.Color.Green;
-            this.TeaspoonButton.Location = new System.Drawing.Point(258, 31);
+            this.TeaspoonButton.Location = new System.Drawing.Point(258, 9);
             this.TeaspoonButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.TeaspoonButton.Name = "TeaspoonButton";
             this.TeaspoonButton.Size = new System.Drawing.Size(75, 28);
@@ -3236,7 +3234,7 @@
             // LiterButton
             // 
             this.LiterButton.ForeColor = System.Drawing.Color.Green;
-            this.LiterButton.Location = new System.Drawing.Point(336, 93);
+            this.LiterButton.Location = new System.Drawing.Point(336, 71);
             this.LiterButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.LiterButton.Name = "LiterButton";
             this.LiterButton.Size = new System.Drawing.Size(75, 28);
@@ -3250,7 +3248,7 @@
             // MilliliterButton
             // 
             this.MilliliterButton.ForeColor = System.Drawing.Color.Green;
-            this.MilliliterButton.Location = new System.Drawing.Point(336, 62);
+            this.MilliliterButton.Location = new System.Drawing.Point(336, 40);
             this.MilliliterButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MilliliterButton.Name = "MilliliterButton";
             this.MilliliterButton.Size = new System.Drawing.Size(75, 28);
@@ -3264,7 +3262,7 @@
             // MilligramButton
             // 
             this.MilligramButton.ForeColor = System.Drawing.Color.Red;
-            this.MilligramButton.Location = new System.Drawing.Point(336, 186);
+            this.MilligramButton.Location = new System.Drawing.Point(336, 164);
             this.MilligramButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.MilligramButton.Name = "MilligramButton";
             this.MilligramButton.Size = new System.Drawing.Size(75, 28);
@@ -3278,7 +3276,7 @@
             // GallonButton
             // 
             this.GallonButton.ForeColor = System.Drawing.Color.Green;
-            this.GallonButton.Location = new System.Drawing.Point(336, 31);
+            this.GallonButton.Location = new System.Drawing.Point(336, 9);
             this.GallonButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.GallonButton.Name = "GallonButton";
             this.GallonButton.Size = new System.Drawing.Size(75, 28);
@@ -3292,7 +3290,7 @@
             // GramButton
             // 
             this.GramButton.ForeColor = System.Drawing.Color.Red;
-            this.GramButton.Location = new System.Drawing.Point(414, 155);
+            this.GramButton.Location = new System.Drawing.Point(414, 133);
             this.GramButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.GramButton.Name = "GramButton";
             this.GramButton.Size = new System.Drawing.Size(75, 28);
@@ -3306,7 +3304,7 @@
             // KilogramButton
             // 
             this.KilogramButton.ForeColor = System.Drawing.Color.Red;
-            this.KilogramButton.Location = new System.Drawing.Point(414, 186);
+            this.KilogramButton.Location = new System.Drawing.Point(414, 164);
             this.KilogramButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.KilogramButton.Name = "KilogramButton";
             this.KilogramButton.Size = new System.Drawing.Size(75, 28);
@@ -3320,7 +3318,7 @@
             // DegreeFButton
             // 
             this.DegreeFButton.ForeColor = System.Drawing.Color.Blue;
-            this.DegreeFButton.Location = new System.Drawing.Point(414, 93);
+            this.DegreeFButton.Location = new System.Drawing.Point(414, 71);
             this.DegreeFButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.DegreeFButton.Name = "DegreeFButton";
             this.DegreeFButton.Size = new System.Drawing.Size(75, 28);
@@ -3334,7 +3332,7 @@
             // DegreeCButton
             // 
             this.DegreeCButton.ForeColor = System.Drawing.Color.Blue;
-            this.DegreeCButton.Location = new System.Drawing.Point(414, 124);
+            this.DegreeCButton.Location = new System.Drawing.Point(414, 102);
             this.DegreeCButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.DegreeCButton.Name = "DegreeCButton";
             this.DegreeCButton.Size = new System.Drawing.Size(75, 28);
@@ -3348,7 +3346,7 @@
             // CalorieButton
             // 
             this.CalorieButton.ForeColor = System.Drawing.Color.Purple;
-            this.CalorieButton.Location = new System.Drawing.Point(414, 31);
+            this.CalorieButton.Location = new System.Drawing.Point(414, 9);
             this.CalorieButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.CalorieButton.Name = "CalorieButton";
             this.CalorieButton.Size = new System.Drawing.Size(75, 28);
@@ -3362,7 +3360,7 @@
             // KilojouleButton
             // 
             this.KilojouleButton.ForeColor = System.Drawing.Color.Purple;
-            this.KilojouleButton.Location = new System.Drawing.Point(414, 62);
+            this.KilojouleButton.Location = new System.Drawing.Point(414, 40);
             this.KilojouleButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.KilojouleButton.Name = "KilojouleButton";
             this.KilojouleButton.Size = new System.Drawing.Size(75, 28);
@@ -3373,11 +3371,42 @@
             this.KilojouleButton.Click += new System.EventHandler(this.KilojouleButton_Click);
             this.KilojouleButton.Enter += new System.EventHandler(this.Button_Enter);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 201);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(498, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(436, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            this.toolStripStatusLabel1.Text = "© 2018 Lolliesoft Magazine";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel2.Image")));
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(16, 17);
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            // 
             // appKitchenCalculatorDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 224);
+            this.ClientSize = new System.Drawing.Size(498, 223);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.KilojouleButton);
             this.Controls.Add(this.CalorieButton);
             this.Controls.Add(this.DegreeCButton);
@@ -3396,7 +3425,6 @@
             this.Controls.Add(this.CupButton);
             this.Controls.Add(this.TablespoonButton);
             this.Controls.Add(this.FluidOunceButton);
-            this.Controls.Add(this.MainMenuMenuStrip);
             this.Controls.Add(this.MemoryLabel);
             this.Controls.Add(this.DisplayLabel);
             this.Controls.Add(this.ClearEntryButton);
@@ -3423,8 +3451,7 @@
             this.Controls.Add(this.MemorySaveButton);
             this.Controls.Add(this.MemoryRecallButton);
             this.Controls.Add(this.MemoryClearButton);
-          //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.MainMenuMenuStrip;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "appKitchenCalculatorDialog";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -3433,6 +3460,8 @@
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.appKitchenCalculatorDialog_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.appKitchenCalculatorDialog_KeyDown);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4777,6 +4806,17 @@
             Australia,
             NewZealand,
             Canada
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            appAboutDialog About = new appAboutDialog();
+            About.ShowDialog();
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.lolliesoft.com");
         }
     }
 }
